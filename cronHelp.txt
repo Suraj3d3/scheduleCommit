@@ -1,0 +1,30 @@
+# to set a new task
+	crontab -e
+	
+	# eg:
+	
+	# run script every second
+	* * * * * /bin/sh /home/suraj/Pictures/questionsCommit.sh  
+	
+	# run script at 1:55AM
+	55 1 * * * /bin/sh /home/suraj/Pictures/questionsCommit.sh  
+	
+	# run script at 10:20AM
+	20 10 * * * /bin/sh /home/suraj/Pictures/questionsCommit.sh  
+	
+	
+# Eg:  schedulea a script to run at 10:15 AM and write the status to a log file
+
+	Syntax : 
+	timer /path-of-the-script > /path-of-the-log-file 2>&1
+	
+	10 15 * * *  /home/suraj/Pictures/questionsCommit.sh > /home/suraj/Pictures/commitLog.log 2>&1
+ 	
+ 	
+#list of all cron jobs
+ 	crontab -l 
+
+	
+	
+#Check cron log
+	grep CRON /var/log/syslog
